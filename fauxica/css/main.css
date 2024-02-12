@@ -1,0 +1,212 @@
+html {
+    /* for easier conversion of figma values, by the the default value is 100%,
+    for example to convert px values to relative values like rem or em we just have to
+    move one decimal place left, such 52px ---> 5.2 rem, 62.5px ---> 6.25 em
+     */
+    font-size: 62.5%; 
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+.wrapper {
+    max-width: 1200px;
+    /* margin top-bottom is 0 but left-right is 'auto' which will center the content */
+    margin: 0 auto;
+}
+
+/* Navbar */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+nav {
+    /* 4em == 40px */
+    margin: 4em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 4.1em;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+nav ul li a.active::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+
+/* Hero Section */
+ main {
+    display: flex;
+    gap: 8em;
+    margin-top: 11em;
+ }
+
+ .left-col {
+    width: 45%;
+ }
+
+ .right-col {
+    flex-grow: 1;
+ }
+
+ .left-col h1 {
+    font-size: 5.2rem;
+    font-family: 'Playfair Display';
+    margin: 0;
+ }
+
+ .subheading {
+    font-size: 1.8rem;
+ }
+
+ .cta-btns {
+    margin: 5em 0;
+ }
+
+ .cta-btns, .secondary-cta {
+    display: flex;
+    gap: 2em;
+ }
+
+.primary-cta {
+    background-color: #F1E2D1;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+}
+
+.secondary-cta {
+    font-size: 1.8rem;
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 1em 0;
+}
+
+.secondary-cta svg {
+    width: 2rem;
+}
+
+.news {
+    display: flex;
+    gap: 3em;
+    padding: 5em;
+    border: 1px solid black;
+    border-radius: 0.8em;
+    position: relative;
+}
+
+.news::before {
+    position: absolute;
+    content: "";
+    background: url('../assets/images/confetti.svg');
+    width: 10em;
+    height: 10em;
+    top: -20px;
+    left: -20px;
+    z-index: 2;
+}
+
+p.employees {
+    font-size: 3.3rem;
+    margin: 0;
+    font-weight: 200;
+    line-height: 100%;
+}
+
+p.details {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/* Right Columns */
+
+.right-col {
+    display: grid;
+    gap: 2.3em;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+        "left ."
+        "left .";
+}
+
+.card  {
+    background: gray;
+    border-radius: 0.8em;
+    padding: 1.1em;
+    display: flex;
+    align-items: end;
+    background-size: 150%;
+}
+
+.card1 {
+    grid-area: left;
+    background-image: url('../assets/images/clothing1.jpg');
+    position: relative;
+}
+
+.card1::before {
+    position: absolute;
+    content: "";
+    background: url('../assets/images/tag.svg') no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: -30px;
+    pointer-events: none;
+}
+
+.card2 {
+    background-image: url('../assets/images/clothing2.jpg');
+}
+.card3 {
+    background-image: url('../assets/images/clothing3.jpg');
+}
+
+.card-details {
+    background: white;
+    border-radius: 0.6em;
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-details a {
+    color: black;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.card-details p {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+p.product-price {
+    font-size: 1.8rem;
+}
