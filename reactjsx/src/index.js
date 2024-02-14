@@ -1,15 +1,26 @@
-// 1. Import dependencies
-import React from 'react';
-import { createRoot } from 'react-dom/client';
+// A quick introduction to Javascript
 
-// 2. Create a React element
-const element = React.createElement(
- 'p',
- { id: 'hello' },
- 'Hello World!'
-);
+/*
+console.log( "Hi I am Subrata" );
+console.log( "Mondal, Subrata Mondal" );
 
-// 3. Render the application
-const container = document.querySelector('#root');
-const root = createRoot(container);
-root.render(element);
+window.alert( "Subrata Mondal" )
+*/
+
+// Variables in Javascript, we can define them in two steps:
+// 1. Declarations(var, let, const)
+// 2. Assignment (=)
+
+/*
+let fitstName = "Subrata";
+let age = 23;
+let isStudent = false;
+
+console.log("Hello!!!", fitstName )
+console.log("You are", age, "years old" )
+console.log( "Are you a student", isStudent )
+
+document.getElementById( elementId = "p1" ).innerHTML = "Hello!!! " + fitstName;
+document.getElementById( elementId = "p2" ).innerHTML = "You are" + age + "years old" ;
+document.getElementById( elementId = "p3" ).innerHTML = "Are you a student" + isStudent;
+*/
